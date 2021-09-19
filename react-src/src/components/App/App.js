@@ -94,10 +94,10 @@ class App extends Component {
               <br/>
               CREATE, READ, UPDATE, and DELETE operations are updated in real-time to online users using Socket.io.
             </p>
-            <a className='shirts' href='https://www.teepublic.com/en-au/user/codeweario/albums/4812-tech-stacks' target='_blank' rel='noopener noreferrer'>
+            {/* <a className='shirts' href='https://www.teepublic.com/en-au/user/codeweario/albums/4812-tech-stacks' target='_blank' rel='noopener noreferrer'>
               <img src={shirts} alt='Buy MERN Shirts' />
               <br/>Buy MERN Shirts
-            </a>
+            </a> */}
           </div>
         </div>
         <Container>
