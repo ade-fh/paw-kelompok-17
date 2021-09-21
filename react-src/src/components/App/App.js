@@ -7,7 +7,6 @@ import TableUser from '../TableUser/TableUser';
 import ModalUser from '../ModalUser/ModalUser';
 
 import logo from '../../mern-logo.png';
-import shirts from '../../shirts.png';
 import './App.css';
 
 class App extends Component {
@@ -89,15 +88,6 @@ class App extends Component {
           <div className='App-header'>
             <img src={logo} className='App-logo' alt='logo' />
             <h1 className='App-intro'>MERN CRUD</h1>
-            <p>
-              A simple records system using MongoDB, Express.js, React.js, and Node.js. REST API was implemented on the back-end.
-              <br/>
-              CREATE, READ, UPDATE, and DELETE operations are updated in real-time to online users using Socket.io.
-            </p>
-            {/* <a className='shirts' href='https://www.teepublic.com/en-au/user/codeweario/albums/4812-tech-stacks' target='_blank' rel='noopener noreferrer'>
-              <img src={shirts} alt='Buy MERN Shirts' />
-              <br/>Buy MERN Shirts
-            </a> */}
           </div>
         </div>
         <Container>
