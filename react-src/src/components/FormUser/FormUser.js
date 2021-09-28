@@ -3,8 +3,9 @@ import { Message, Button, Form, Select } from 'semantic-ui-react';
 import axios from 'axios';
 
 const genderOptions = [
-  { key: 'L', text: 'Laki-Laki', value: 'Laki-Laki' },
-  { key: 'P', text: 'Perempuan', value: 'Perempuan' }
+  { key: 'm', text: 'Male', value: 'm' },
+  { key: 'f', text: 'Female', value: 'f' },
+  { key: 'o', text: 'Do Not Disclose', value: 'o' }
 ]
 
 class FormUser extends Component {
@@ -128,7 +129,7 @@ class FormUser extends Component {
     return (
       <Form className={formClassName} onSubmit={this.handleSubmit}>
         <Form.Input
-          label='Nama'
+          label='Name'
           type='text'
           placeholder='Elon Musk'
           name='name'
@@ -149,7 +150,7 @@ class FormUser extends Component {
         />
         <Form.Group widths='equal'>
           <Form.Input
-            label='Umur'
+            label='Age'
             type='number'
             placeholder='18'
             min={5}
@@ -160,7 +161,7 @@ class FormUser extends Component {
           />
           <Form.Field
             control={Select}
-            label='Jenis Kelamin'
+            label='Gender'
             options={genderOptions}
             placeholder='Gender'
             value={this.state.gender}
@@ -170,17 +171,17 @@ class FormUser extends Component {
         <Message
           success
           color='green'
-          header='Sukses'
+          header='Nice one!'
           content={formSuccessMessage}
         />
         <Message
           warning
           color='yellow'
-          header='Gagal!'
+          header='Woah!'
           content={formErrorMessage}
         />
         <Button color={this.props.buttonColor} floated='right'>{this.props.buttonSubmitTitle}</Button>
-        <br /><br />
+        <br /><br /> {/* Yikes! Deal with Semantic UI React! */}
       </Form>
     );
   }
