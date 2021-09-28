@@ -1,6 +1,6 @@
 # paw-mern-crud
 
-A simple CRUD applications with MERN stack and Socket.io.
+A simple CRUD web applications with MERN stack and Socket.io.
 
 Demo: [https://paw-mern-crud.herokuapp.com/](https://paw-mern-crud.herokuapp.com/)
 
