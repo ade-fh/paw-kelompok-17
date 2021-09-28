@@ -15,7 +15,7 @@ npm install
 
 Run the *main server*. It listens on port 3000.
 ```bash
-CORS=1 node server
+npm start
 ```
 View it on the browser.
 
