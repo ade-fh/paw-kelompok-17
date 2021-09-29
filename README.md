@@ -46,6 +46,11 @@ npm run build
 
 For API testing use api branch instead.
 
+CREATE user
+```bash
+/users
+```
+
 GET all users
 ```bash
 /users
