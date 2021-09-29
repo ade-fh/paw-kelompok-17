@@ -43,15 +43,15 @@ router.get('/', (req, res) => {
 router.post('/', postLimiter, (req, res) => {
 
   // Validate the age
-  let age = sanitizeAge(req.body.age);
+  let age = req.body.age;
   if (age < 5 && age != '') return res.status(403).json({ success: false, msg: `You're too young for this.` });
   else if (age > 130 && age != '') return res.status(403).json({ success: false, msg: `You're too old for this.` });
 
   let newUser = new User({
-    name: sanitizeName(req.body.name),
-    email: sanitizeEmail(req.body.email),
-    age: sanitizeAge(req.body.age),
-    gender: sanitizeGender(req.body.gender)
+    name: req.body.name,
+    email: req.body.email,
+    age: req.body.age,
+    gender: req.body.gender
   });
 
   newUser.save()
@@ -96,15 +96,15 @@ router.post('/', postLimiter, (req, res) => {
 router.put('/:id', (req, res) => {
 
   // Validate the age
-  let age = sanitizeAge(req.body.age);
+  let age = req.body.age;
   if (age < 5 && age != '') return res.status(403).json({ success: false, msg: `You're too young for this.` });
   else if (age > 130 && age != '') return res.status(403).json({ success: false, msg: `You're too old for this.` });
 
   let updatedUser = {
-    name: sanitizeName(req.body.name),
-    email: sanitizeEmail(req.body.email),
-    age: sanitizeAge(req.body.age),
-    gender: sanitizeGender(req.body.gender)
+    name: req.body.name,
+    email: req.body.email,
+    age: req.body.age,
+    gender: req.body.gender
   };
 
   User.findOneAndUpdate({ _id: req.params.id }, updatedUser, { runValidators: true, context: 'query' })
@@ -176,19 +176,19 @@ router.delete('/:id', (req, res) => {
 
 module.exports = router;
 
-// Minor sanitizing to be invoked before reaching the database
-sanitizeName = (name) => {
-  return stringCapitalizeName(name);
-}
-sanitizeEmail = (email) => {
-  return email.toLowerCase();
-}
-sanitizeAge = (age) => {
-  // Return empty if age is non-numeric
-  if (isNaN(age) && age != '') return '';
-  return (age === '') ? age : parseInt(age);
-}
-sanitizeGender = (gender) => {
-  // Return empty if it's neither of the two
-  return (gender === 'm' || gender === 'f') ? gender : '';
-}
+// // Minor sanitizing to be invoked before reaching the database
+// sanitizeName = (name) => {
+//   return stringCapitalizeName(name);
+// }
+// sanitizeEmail = (email) => {
+//   return email.toLowerCase();
+// }
+// sanitizeAge = (age) => {
+//   // Return empty if age is non-numeric
+//   if (isNaN(age) && age != '') return '';
+//   return (age === '') ? age : parseInt(age);
+// }
+// sanitizeGender = (gender) => {
+//   // Return empty if it's neither of the two
+//   return (gender === 'm' || gender === 'f') ? gender : '';
+// }
