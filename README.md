@@ -46,7 +46,22 @@ npm run build
 
 For API testing use api branch instead.
 
-READ/GET
+GET all users
 ```bash
 /users
+```
+
+GET specific user
+```bash
+/users/{id}
+```
+
+EDIT specific user
+```bash
+/users/{id}
+```
+
+DELETE specific user
+```bash
+/users/{id}
 ```
