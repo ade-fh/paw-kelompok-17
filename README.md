@@ -41,3 +41,11 @@ To make a production build, simply run on *react-src* folder via the terminal.
 ```bash
 npm run build
 ```
+
+## Instructions
+
+For API testing use api branch instead.
+Run the *development server* for React. It listens on port 4200.
+```bash
+/users
+```
