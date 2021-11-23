@@ -7,8 +7,8 @@
 }
 
 .App-logo {
-  /* animation: App-logo-spin infinite 20s linear; */
-  height: 85px;
+  width: 50%;
+  height: auto;
 }
 
 .App-intro {
@@ -22,24 +22,6 @@
 
 #online {
   margin-left: 10px;
-}
-
-.shirts {
-  opacity: 1;
-}
-
-.shirts:hover {
-  opacity: .75;
-}
-
-a.shirts {
-  color: #ccc;
-  font-size: 13px;
-}
-
-.shirts img {
-  height: 40px;
-  animation: pulse 1s infinite;
 }
 
 @keyframes pulse {

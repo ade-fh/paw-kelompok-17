@@ -20,7 +20,7 @@ class TableUser extends Component {
           <ModalUser
             headerTitle='Edit User'
             buttonTriggerTitle='Edit'
-            buttonSubmitTitle='Save'
+            buttonSubmitTitle='Simpan'
             buttonColor='blue'
             userID={user._id}
             onUserUpdated={this.props.onUserUpdated}
@@ -28,8 +28,8 @@ class TableUser extends Component {
             socket={this.props.socket}
           />
           <ModalConfirmDelete
-            headerTitle='Delete User'
-            buttonTriggerTitle='Delete'
+            headerTitle='Hapus User'
+            buttonTriggerTitle='Hapus'
             buttonColor='black'
             user={user}
             onUserDeleted={this.props.onUserDeleted}
@@ -40,18 +40,17 @@ class TableUser extends Component {
       </Table.Row>
     );
 
-    // Make every new user appear on top of the list
     users =  [...users].reverse();
 
     return (
       <Table singleLine>
         <Table.Header>
           <Table.Row>
-            <Table.HeaderCell>Name</Table.HeaderCell>
+            <Table.HeaderCell>Nama</Table.HeaderCell>
             <Table.HeaderCell>Email</Table.HeaderCell>
-            <Table.HeaderCell>Age</Table.HeaderCell>
-            <Table.HeaderCell>Gender</Table.HeaderCell>
-            <Table.HeaderCell>Actions</Table.HeaderCell>
+            <Table.HeaderCell>Umur</Table.HeaderCell>
+            <Table.HeaderCell>Jenis Kelamin</Table.HeaderCell>
+            <Table.HeaderCell>Aksi</Table.HeaderCell>
           </Table.Row>
         </Table.Header>
         <Table.Body>
