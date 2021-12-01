@@ -87,7 +87,7 @@ class App extends Component {
         <div className='App'>
           <div className='App-header'>
             <img src={logo} className='App-logo' alt='logo' />
-            <h1 className='App-intro'>MERN CRUD</h1>
+            <h1 className='App-intro'>Aplikasi Web Pendataan Karyawan</h1>
           </div>
         </div>
         <Container>
